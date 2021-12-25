@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class Demo
+{
+	public static void main(String args[])
+	{
+		Scanner scan=new Scanner(System.in);
+		//int n=scan.nextInt();
+		System.out.println("Enter the values of m and n");
+		int m=scan.nextInt();
+		int k=scan.nextInt();
+		int temp;
+		//System.out.println("Enter the values of m and n");
+		System.out.println("Before swapping the numbers"+m+" " +k);
+		temp=m;
+		m=k;
+		k=temp;
+		System.out.println("After Swapping"+m+" "+k);
+		}
+}
