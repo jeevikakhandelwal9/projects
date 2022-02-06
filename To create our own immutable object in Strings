@@ -1,0 +1,26 @@
+final  class City
+{
+	private int i;
+		City(int i){
+			this.i=i;
+		}
+	public City modify(int i)
+	{
+		if(this.i==i)
+		{
+			return this;
+		}
+		else
+		{
+			return new City(i);
+		}
+	}
+	public static void main(String[] args){
+		City c1=new City(10);
+		City c2=c1.modify(100);
+		City c3=c1.modify(10);
+
+		System.out.println(c1==c2);
+		System.out.println(c1==c3);
+	}
+}
