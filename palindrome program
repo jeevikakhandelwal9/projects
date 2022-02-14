@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class Demo
+{
+    public static void main(String[] args){
+        Scanner scan=new Scanner(System.in);
+        String s=scan.nextLine();
+        s=s.replace(" ","");
+        s=s.replaceAll("[^A-za-z0-9]","");
+        s=s.toLowerCase();
+        char[] x=s.toCharArray();
+        int size=x.length;
+        char[] y=new char[size];
+        int i=0;
+        while(i!=size){
+            y[size-1-i]=x[i];
+            i++;
+        }
+        i=0;
+        while(i!=size){
+            if(y[i]!=x[i]){
+                System.out.println(false);
+                System.exit(0);
+            }
+            else{
+                ++i;
+                continue;
+            }
+        }
+        System.out.println(true);
+    }
+}
